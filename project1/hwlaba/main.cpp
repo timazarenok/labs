@@ -18,7 +18,7 @@ Pair quadratic_equation(double a, double b, double c)
     double discriminant = get_discriminant(a, b, c);
     if(discriminant < 0)
     {
-        std::cout << discriminant << std::endl;
+        std::cout << "error" << std::endl;
     }
     result.first = -b + sqrt(discriminant)/a*2;
     result.second = -b - sqrt(discriminant)/a*2;
