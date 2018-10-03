@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1538595295 source:d:\projects\project1\hwlaba\main.cpp
+	<iostream>
+	<cmath>
+
