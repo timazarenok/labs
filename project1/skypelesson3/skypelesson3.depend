@@ -1,4 +1,10 @@
 # depslib dependency file v1.0
-1540230294 source:d:\projects\project1\skypelesson3\main.cpp
+1540234421 source:d:\projects\project1\skypelesson3\main.cpp
 	<iostream>
+	"algoritsm.h"
+	"Predicates.h"
+
+1540233654 d:\projects\project1\skypelesson3\algoritsm.h
+
+1540234407 d:\projects\project1\skypelesson3\predicates.h
 
