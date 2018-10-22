@@ -1,35 +1,48 @@
 #include <iostream>
+#include "algoritsm.h"
+#include "Predicates.h"
 
-
-using UnaryPredicate = bool (*)(int, int);
 
 using namespace std;
-int find_positive(int* arr, int size)
+
+
+void print_array(int* arr, int size)
 {
-    --size;
-    for ( ; size > -1; --size)
+    for(int i = 0; i < size; ++i)
     {
-        if (arr[size] > 0)
-            return size;
+        cout<< arr[i] << " ";
     }
-    return -1;
 }
 
-int accumulate(int* first, int* last, int temp)
+int* get_negative_elements(int* arr, int size)
 {
-    for ( ; first < last; ++first)
-    {
-        temp += (*first);
-    }
-    return temp;
+    int temp = count_if(arr, size, is_negative);
+    int* result = new int[temp];
+    copy_if(result, arr, size, is_negative);
+    return result;
 }
+int* get_positive_elements(int* arr, int size)
+{
+    int temp = count_if(arr, size, is_positive);
+    int* result1 = new int[temp];
+    copy_if(result1, arr, size, is_positive);
+    return result1;
+}
+
 
 int main()
 {
-    int arr[10] {1, 1, -3, 1, 1, 1, 1, -1, -5, -2};
-    cout << find_positive(arr,10) << endl;
-    int result = accumulate(arr, arr+find_positive(arr, 10), 0);
-    cout<< "sum = " << result << endl;
+    int arr[10] {3, 2, -3, 2, 5, 1, 1, -1, -5, -2};
+    int arr1[10]{0};
+    int* result1 = get_negative_elements(arr, 10);
+    print_array(result1, 4);
+    delete[] result1;
+    /*copy_if(arr1, arr, 10, is_positive);
+    print_array(arr1, 10);
+    cout<< " last positive argument = " << find_if(arr, 10, is_positive) <<endl;
+    int result = accumulate(arr, arr + find_if(arr, 10, is_positive), 0);
+    cout<< " sum = " << result <<endl;
+    */
     return 0;
 }
 
