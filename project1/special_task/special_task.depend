@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1540673517 source:d:\projects\project1\special_task\main.cpp
+1540742837 source:d:\projects\project1\special_task\main.cpp
 	<iostream>
 	"unarypredicate.h"
 	"task0.h"
