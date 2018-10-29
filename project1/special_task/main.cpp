@@ -145,10 +145,68 @@ void print_bigger_element(int* arr, int size)
     {
         if(arithmetic_average(arr,5) < arr[i])
         {
-            cout << " bigger element than arithmetic average = " << arr[i] <<endl;
+            cout << " bigger element than arithmetic average = " << arr[i] << ";" <<endl;
         }
     }
 }
+void print_smaller_element(int* arr, int size)
+{
+    for(int i = 0; i < size; ++i)
+    {
+        if(arr[i] < arithmetic_average(arr, 5))
+        {
+            cout << " smaller element than arithmetic average = " << arr[i] << ";" << endl;
+        }
+    }
+}
+int find_numbers(int* arr, int size)
+{
+        int temp = 0;
+        int min = min_index(arr, 5);
+        int max = max_index(arr, 5);
+        for(int i = min; min < max; ++min)
+        {
+            ++temp;
+        }
+        return temp;
+}
+int task9(int* arr, int size, UnaryPredicate p)
+{
+    int temp = 0;
+    for(int i = 0; i < size; ++i)
+    {
+        if(p(arr[i]))
+        {
+            temp = temp + arr[i];
+        }
+    }
+    return temp;
+}
+int task9_1(int* arr, int size, UnaryPredicate p)
+{
+    int temp = 1;
+    for(int i = 0; i < size; ++i)
+    {
+        if(p(arr[i]))
+        {
+            temp = temp * arr[i];
+        }
+    }
+    return temp;
+}
+int positive_numbers(int* arr, int size, UnaryPredicate p)
+{
+    int temp = 0;
+    for(int i = 0; i < size; ++i)
+    {
+        if(p(arr[i]))
+        {
+            ++temp;
+        }
+    }
+    return temp;
+}
+
 
 
 int main()
@@ -168,6 +226,10 @@ int main()
     int arithmetic_average_result = arithmetic_average(arr, 5);
     int result_min_index = min_index(arr, 5);
     int result_max_index = max_index(arr, 5);
+    int result_numbers = find_numbers(arr, 5);
+    int result_task9 = task9(arr, 5, is_even);
+    int result_task9_1 = task9_1(arr, 5, is_negative);
+    int result_of_positive_numbers = positive_numbers(arr, 5, is_positive);
 
     cout << endl;
     cout << "TASK1 : ";
@@ -199,7 +261,23 @@ int main()
     cout << " max index = " << result_max_index << ";" << endl;
     cout << endl;
     cout << " TASK 7 : ";
-    cout << "" <<
+    cout << " numbers between min and max = " << result_numbers << ";" << endl;
+    cout << endl;
+    cout << " TASK 8 : ";
+    cout << " arithmetic average =  " << arithmetic_average_result << ";" << endl;
+    print_smaller_element(arr, 5);
+    cout << endl;
+    cout << "TASK 9 : ";
+    cout << " sum = " << result_task9 << ";" <<endl;
+    cout << " composition = " << result_task9_1 << ";" << endl;
+    cout << endl;
+    cout << "TASK 10 : ";
+    //cout << "" <<  << ";" << endl;
+    cout << endl;
+    cout << "TASK 11 : ";
+    cout << " sum of negative elements = " << result_taskA2_1 << ";" << endl;
+    cout << " how much positive numbers in array = " << result_of_positive_numbers << ";" << endl;
+    cout << endl;
 
 
 

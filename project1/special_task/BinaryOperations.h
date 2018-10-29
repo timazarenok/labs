@@ -3,11 +3,18 @@
 #include <cmath>
 int accumulate(int a, int b)
 {
-    return a + b;
+    a = a + b;
+    return a;
 }
 int subtraction(int a, int b)
 {
     return a - b;
+}
+void swap(int a, int b)
+{
+    int temp = b;
+    b = a;
+    a = temp;
 }
 
 

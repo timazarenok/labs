@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1540742837 source:d:\projects\project1\special_task\main.cpp
+1540840010 source:d:\projects\project1\special_task\main.cpp
 	<iostream>
 	"unarypredicate.h"
 	"task0.h"
@@ -16,6 +16,6 @@
 	<iostream>
 	"unarypredicate.h"
 
-1540670807 d:\projects\project1\special_task\binaryoperations.h
+1540840086 d:\projects\project1\special_task\binaryoperations.h
 	<cmath>
 
