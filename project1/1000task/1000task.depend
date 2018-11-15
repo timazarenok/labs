@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1542315800 source:d:\projects\project1\1000task\main.cpp
+	<iostream>
+	<cmath>
+	"algoritms.h"
+
+1542313323 d:\projects\project1\1000task\algoritms.h
+
