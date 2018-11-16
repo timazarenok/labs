@@ -19,4 +19,19 @@ double get_D(double a1, double a2, double b1, double b2)
     double d = 0;
     return d = a1*b2 - a2*b1;
 }
+int reverse_(int a)
+{
+    int temp = 0;
+    while(a)
+    {
+        temp *= 10;
+        temp += a%10;
+        a /= 10;
+    }
+    return temp;
+}
+bool middle_point(int a, int b, int c)
+{
+    return (b > a) && (a > c);
+}
 #endif // ALGORITMS_H_INCLUDED

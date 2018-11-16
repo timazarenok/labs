@@ -379,8 +379,6 @@ void f48(int a)
         a /= 10;
     }
     cout << temp << endl;
-
-
 }
 void f49(int a)
 {
@@ -393,6 +391,341 @@ void f50(int a)
     a1 = a1/10;
     int a2 = a%10;
     cout << a1 << " " << a2 << endl;
+}
+void f51(int a)
+{
+    int a1 = a%10;
+    int a2 = a/10;
+    a2 = a2 %10;
+    int a3 = a/100;
+    a3 = a3%10;
+    int sum = a1 + a2 + a3;
+    int mul = a1 * a2 * a3;
+    cout << sum << " " << mul << endl;
+
+}
+void f52(int a)
+{
+    int temp = 0;
+    while(a)
+    {
+        temp *= 10;
+        temp += a%10;
+        a /= 10;
+    }
+    cout << temp << endl;
+}
+void f53(int a)
+{
+    int a1 = a/100;
+    a1 = a1 %10;
+    int a2 = a %100;
+    a2 = a2 * 10;
+    int new_a = a1 + a2;
+    cout << new_a << endl;
+}
+void f54(int a)
+{
+    int a1 = a%10;
+    a1 = a1*100;
+    int a2 = a/10;
+    int new_a = a1 + a2;
+    cout << new_a << endl;
+}
+void f55(int a)
+{
+    int a1 = a/100;
+    int a2 = a%100;
+    a2 = a2 / 10;
+    int a3 = a%10;
+    int new_a = (a2 * 100) + (a1 * 10) + a3;
+    cout << new_a << endl;
+}
+void f56(int a)
+{
+    int a1 = a/100;
+    int a2 = a%100;
+    a2 = a2 / 10;
+    int a3 = a%10;
+    int new_a = (a1 * 100) + (a3 * 10) + a2;
+    cout << new_a << endl;
+}
+void f57(int a)
+{
+    if(a < 999)
+    {
+        cout << " digit < 999" << endl;
+    }
+    else
+    {
+    int new_a = a/100;
+    new_a = new_a %10;
+    cout << new_a << endl;
+    }
+}
+void f58(int a)
+{
+    if(a < 999)
+    {
+        cout << "digit < 999" << endl;
+    }
+    else
+    {
+        int new_a = a/1000;
+        new_a = new_a%10;
+        cout << new_a << endl;
+    }
+}
+void f59(int a)
+{
+    int minut = a/60;
+    cout << minut << endl;
+}
+void f60(int a)
+{
+    int minut = a/60;
+    int hour = minut/60;
+    cout << hour << endl;
+}
+void f61(int a)
+{
+    a = a + 60;
+    cout << a << endl;
+}
+void f62(int a)
+{
+    a = a + 3600;
+    cout << a << endl;
+}
+void f63(int a)
+{
+    a = a + 3600;
+    int minut = a / 60;
+    cout << minut << endl;
+}
+void f64(int a)
+{
+    a = a%7;
+    cout << a << endl;
+}
+void f65(int a)
+{
+    a = a + 4;
+    a = a % 7;
+    cout << a << endl;
+}
+void f66(int a)
+{
+    if(a%7==0)
+    {
+        a = 7;
+        cout << a << endl;
+    }
+    else
+    {
+       a = a%7;
+       cout << a << endl;
+    }
+}
+void f67(int a)
+{
+    a = a + 5;
+    if(a%7==0)
+    {
+        a = 7;
+        cout << a << endl;
+    }
+    else
+    {
+        a = a % 7;
+        cout << a << endl;
+    }
+}
+void f68(int a, int b)
+{
+    cout << a + b << endl;
+}
+void f69()
+{
+
+}
+void f70(int a)
+{
+    if(a < 0)
+    {
+        cout << "error " << endl;
+    }
+    else
+    {
+        int century = (a/100) + 1;
+        cout << century << endl;
+    }
+
+}
+bool f71(int a)
+{
+    return a > 0;
+}
+bool f72(int a)
+{
+    return a%2!=0;
+}
+bool f73(int a)
+{
+    return a%2==0;
+}
+bool f74(int a, int b)
+{
+    return a > 2 && b <= 3;
+}
+bool f75(int a, int b)
+{
+    return a >= 0 && b < -2;
+}
+bool f76(int a, int b, int c)
+{
+    return (a < b) && (b < c);
+}
+bool f77(int a, int b, int c)
+{
+    return (b < a) && (b > c);
+}
+bool f78(int a, int b)
+{
+    return a && b%2 != 0;
+}
+bool f79(int a, int b)
+{
+    return a%2 != 0 || b%2 !=0;
+}
+bool f80(int a, int b)
+{
+    return (a%2!=0) ^ (b%2!=0);
+}
+bool f81(int a, int b)
+{
+    return (a%2==0) == (b%2==0);
+}
+bool f82(int a, int b, int c)
+{
+    return a>0 && b> 0 && c>0;
+}
+bool f83(int a, int b, int c)
+{
+    return a > 0 || b > 0 || c > 0;
+}
+bool f84(int a, int b, int c)
+{
+    return (a > 0) ^ (b > 0) ^ (c > 0);
+}
+bool f85(int a, int b, int c)
+{
+   return (a > 0) !=  (b > 0) == (c > 0);
+}
+bool f86(int a)
+{
+    return a%2==0;
+}
+bool f87(int a)
+{
+    return a%2!=0;
+}
+bool f88(int a, int b, int c)
+{
+    return (a==b) || (b==c) || (c==a);
+}
+bool f89(int a, int b, int c)
+{
+    return (a!=b) || (b!=c) || (c!=a);
+}
+bool f90(int a)
+{
+    int a1 = a%10;
+    int a2 = a%100;
+    a2 = a2 / 10;
+    int a3 = a%1000;
+    a3 = a3 / 100;
+    return (a1 == a2) && (a2 == a3);
+}
+bool f91(int a)
+{
+    int a1 = a%10;
+    int a2 = a%100;
+    a2 = a2 / 10;
+    int a3 = a%1000;
+    a3 = a3 / 100;
+    return (a3 < a2) && (a2 < a1);
+}
+bool f92(int a)
+{
+    int a1 = a%10;
+    int a2 = a%100;
+    a2 = a2 / 10;
+    int a3 = a%1000;
+    a3 = a3 / 100;
+    return ((a3 < a2) && (a2 < a1)) || ((a3 > a2) && (a2 > a1));
+}
+bool f93(int a)
+{
+    return a == reverse_(a);
+}
+bool f94(int a, int b, int c)
+{
+    double d = get_discriminant(a, b, c);
+    if(d<0)
+    {
+        cout<<"error"<<endl;
+    }
+    double x1 = -b + sqrt(d)/a* 2;
+    double x2 = -b - sqrt(d)/a* 2;
+    if(x1 && x2/10 != 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool f95(int x, int y)
+{
+    if(x < 0 && y > 0)
+    {
+        return true;
+    }
+    return false;
+}
+bool f96(int x, int y)
+{
+    if(x > 0 && y < 0)
+    {
+        return true;
+    }
+    return false;
+}
+bool f97(int x, int y)
+{
+    if((x < 0 && y > 0) || (x < 0 && y < 0))
+    {
+        return true;
+    }
+    return false;
+}
+bool f98(int x, int y)
+{
+    if((x > 0 && y > 0) || (x < 0 && y < 0))
+    {
+        return true;
+    }
+    return false;
+}
+bool f99(int x, int x1, int x2, int y, int y1, int y2)
+{
+    return middle_point(x,x1,x2) && middle_point(y, y1, y2);
+}
+bool f100(int a, int b, int c)
+{
+    return (a == b) && (b == c);
 }
 int main()
 {
@@ -447,6 +780,56 @@ int main()
     //f48(25);
     //f49(321);
     //f50(456);
+    //f51(123);
+    //f52(123);
+    //f53(983);
+    //f54(123);
+    //f55(123);
+    //f56(123);
+    //f57(1987);
+    //f58(2789);
+    //f59(100);
+    //f60(8000);
+    //f61(500);
+    //f62(1000);
+    //f63(60);
+    //f64(1);
+    //f65(68);
+    //f66(1);
+    //f67(1);
+    //f68(3 , 4);
+    //f69();
+    //f70(1800);
+    //cout << f71(3) << endl;
+    //cout << f72(3) << endl;
+    //cout << f73(4) << endl;
+    //cout << f74(4,3) << endl;
+    //cout << f75(3, -8) << endl;
+    //cout << f76(2, 3, 5) << endl;
+    //cout << f77(5, 3, 2) << endl;
+    //cout << f78(3,5) << endl;
+    //cout << f79(3, 6) << endl;
+    //cout << f80(2, 5) << endl;
+    //cout << f81(3,5) << endl;
+    //cout << f82(4, 5, 6) << endl;
+    //cout << f83(4,5,-3) << endl;
+    //cout << f84(4, -4, -3) << endl;
+    //cout << f85(-4, 4, 3) << endl;
+    //cout << f86(26) << endl;
+    //cout << f87(27) << endl;
+    //cout << f88(3, 3, 5) << endl;
+    //cout << f89(3,2,3) << endl;
+    //cout << f90(333) << endl;
+    //cout << f91(123) << endl;
+    //cout << f92(123) << endl;
+    //cout << f93(4554) << endl;
+    //cout << f94(1, 2, 2) << endl;
+    //cout << f95(-3, 5) << endl;
+    //cout << f96(3, -5) << endl;
+    //cout << f97(-3, -5) << endl;
+    //cout << f98(-3,-4) << endl;
+    //cout << f99(2,3,1, 5, 8, 2) << endl;
+    cout << f100(4,4,4) << endl;
     cout << " " << endl;
     return 0;
 }
