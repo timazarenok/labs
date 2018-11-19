@@ -3,6 +3,7 @@
 #include "algoritms.h"
 #define PI 3.14
 using namespace std;
+
 void f1(int*array, int size)
 {
     for(int i = 0, j = 2; i < size; ++i , j=j*2)
@@ -727,6 +728,249 @@ bool f100(int a, int b, int c)
 {
     return (a == b) && (b == c);
 }
+bool f101(int a, int b, int c)
+{
+    return (a == b) || (b == c);
+}
+bool f102(int a, int b, int c)
+{
+    if(a * b == c)
+    {
+        return true;
+    }
+    return false;
+}
+bool f103(int a, int b, int c)
+{
+    if(a < 0 || b < 0 || c < 0)
+    {
+        return false;
+    }
+    return true;
+}
+int f104(int a)
+{
+    if(a > 0)
+    {
+        a = a + 1;
+        return a;
+    }
+    else
+    {
+        return a;
+    }
+
+}
+int f105(int a)
+{
+    if(a > 0)
+    {
+        a = a +1;
+        return a;
+    }
+    else
+    {
+        a = a - 2;
+        return a;
+    }
+}
+int f106(int a)
+{
+    if(a == 0)
+    {
+        a = 10;
+        return a;
+    }
+    if(a > 0)
+    {
+        a = a + 1;
+        return a;
+    }
+    else
+    {
+        a = a - 2;
+        return a;
+    }
+}
+int f107(int a, int b, int c)
+{
+    int counter = 0;
+    if(a > 0)
+    {
+        ++counter;
+    }
+    if(b > 0)
+    {
+        ++counter;
+    }
+    if(c > 0)
+    {
+        ++counter;
+    }
+    return counter;
+}
+void f108(int a, int b, int c)
+{
+    int positive = 0;
+    int negative = 0;
+    if(a > 0)
+    {
+        ++positive;
+    }
+    else
+    {
+        ++negative;
+    }
+    if(b > 0)
+    {
+        ++positive;
+    }
+    else
+    {
+        ++negative;
+    }
+    if(c > 0)
+    {
+        ++positive;
+    }
+    else
+    {
+        ++negative;
+    }
+    cout << positive << endl;
+    cout << negative << endl;
+}
+int f109(int a, int b)
+{
+    if(a > b)
+    {
+        return a;
+    }
+    else{return b;}
+}
+void f110(int a, int b)
+{
+    if(a > b)
+    {
+        cout << "1" << endl;
+    }
+    else
+    {
+        cout << "2" << endl;
+    }
+}
+void f111(int a, int b)
+{
+    if(a > b)
+    {
+        cout << a << endl;
+        cout << b << endl;
+    }
+    else
+    {
+        cout << b << endl;
+        cout << a << endl;
+    }
+}
+void f112(int a, int b)
+{
+    if(a > b)
+    {
+        int temp = a;
+        a = b;
+        b = temp;
+        cout << a << endl;
+        cout << b << endl;
+    }
+    else
+    {
+        cout << a << endl;
+        cout << b << endl;
+    }
+}
+void f113(int a, int b)
+{
+    if(a == b)
+    {
+        int sum = a + b;
+        a = sum;
+        b = sum;
+    }
+    else
+    {
+        a = 0;
+        b = 0;
+    }
+    cout << a << " " << b << endl;
+}
+void f114(int a, int b)
+{
+    if(a != b)
+    {
+        a = get_greater(a, b);
+        b = a;
+    }
+    else
+    {
+        a = 0;
+        b = 0;
+    }
+    cout << a << " " << b << endl;
+}
+void f115(int a, int b, int c)
+{
+    if(a < b && c)
+    {
+        cout << a << endl;
+    }
+    if(b < a && c)
+    {
+        cout << b << endl;
+    }
+    if(c < a && b)
+    {
+        cout << c << endl;
+    }
+}
+void f116(int a, int b, int c)
+{
+    if(a > b && b > c)
+    {
+        a = a * 2;
+        b = b * 2;
+        c = c * 2;
+    }
+    else
+    {
+        a = -a;
+        b = -b;
+        c = -c;
+    }
+    cout << a << " " << b << " " << c << endl;
+}
+void f117(int a, int b, int c)
+{
+    if((a > b && b > c) || (a < b && b < c))
+    {
+        a = a * 2;
+        b = b * 2;
+        c = c * 2;
+    }
+    else
+    {
+        a = -a;
+        b = -b;
+        c = -c;
+    }
+    cout << a << " " << b << " " << c << endl;
+}
+void f118(int a, int b, int c)
+{
+    if(c != a && b)
+    {
+        cout << "3" << endl;
+    }
+}
 int main()
 {
     int array[5]{0};
@@ -829,7 +1073,25 @@ int main()
     //cout << f97(-3, -5) << endl;
     //cout << f98(-3,-4) << endl;
     //cout << f99(2,3,1, 5, 8, 2) << endl;
-    cout << f100(4,4,4) << endl;
+    //cout << f100(4,4,4) << endl;
+    //cout << f101(3,3,4) << endl;
+    //cout << f102(3,3,9) << endl;
+    //cout << f103(3,2,3) << endl;
+    //cout << f104(4) << endl;
+    //cout << f105(-3) << endl;
+    //cout << f106(2) << endl;
+    //cout << f107(3, -4, 5) << endl;
+    //f108(3,-2,3);
+    //cout << f109(3, 4) << endl;
+    //f110(3, 4);
+    //f111(3,4);
+    //f112(2,3);
+    //f113(3,4);
+    //f114(6,4);
+    //f115(3,5,4);
+    //f116(4,3,2);
+    //f117(3,2,1);
+    f118(3,3,4);
     cout << " " << endl;
     return 0;
 }

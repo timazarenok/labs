@@ -34,4 +34,18 @@ bool middle_point(int a, int b, int c)
 {
     return (b > a) && (a > c);
 }
+void swap1(int a, int b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+int get_greater(int a, int b)
+{
+    if(a > b)
+    {
+        return a;
+    }
+    return b;
+}
 #endif // ALGORITMS_H_INCLUDED
